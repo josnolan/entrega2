@@ -11,13 +11,13 @@
     display: grid;
     grid-template-areas:
     "menu  menu  menu"
-    "info2 info2 banner"
-    "info2 info2 banner"
+    "info2 info2 info2"
+    "info2 info2 info2"
     "footer footer footer";
     gap: 5px;
-    height: 145vh;
-    grid-template-rows: 80px auto 170px 30px;
-    grid-template-columns: auto auto 400px;
+    height: 190vh;
+    grid-template-rows: 80px auto auto 30px;
+    grid-template-columns: auto auto auto;
     background: linear-gradient(to top,#537A38,#D4F7BB,#A8F571);
 }
 
@@ -88,15 +88,7 @@ color:antiquewhite;
 border-radius: 5px;
 }
 
-#area nav ul li a 
-{
-margin:10px 10px;
-padding: 10px;
-background-color: #A8F571;
-text-decoration: none;
-color:antiquewhite;
-border-radius: 5px;
-}
+
 
 #area nav ul li a:hover
  {
@@ -108,8 +100,19 @@ border-radius: 5px;
 {
     
     grid-area: info2;
-    padding-top:40px;
+    padding-top:20px;
 }
+
+#area section .p1 {
+    
+    width:100%;
+    height: auto;
+    font-size: 20px;
+    padding: 5px 10px;
+    
+}
+
+
 
 #area section form
 {
@@ -136,7 +139,7 @@ border-radius: 5px;
     flex-direction: column;
     align-content: stretch;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 
@@ -167,26 +170,6 @@ border-radius: 5px;
     padding:5px;
 
 }
-
-#area aside h8{
-    width: 400px;
-    height: 100px;
-    padding: 5px;
-    padding-top: 40px;
-    margin-right: 0px;
-    background-color: #537A38;
-    animation-name: example;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    text-align: center;
-  }
-  
-  @keyframes example {
-    0%   {background-color: #537A38;}
-    25%  {background-color: #D4F7BB;}
-    50%  {background-color: #A8F571;}
-    100% {background-color: green;}
-  }
 
 #area footer
 {
@@ -225,21 +208,6 @@ border-radius: 5px;
     
 }
 
-#area section input .et
-{
-    
-transition:all 1s;
-
-}
-
-#area section .et input:focus
-{
-    width: 500px;
-    height:50px;
-    background-color: #A8F571;
-}
-
-
 #area section .titulo2 {
     
     text-align: center;
@@ -249,24 +217,27 @@ transition:all 1s;
     padding-bottom: 5px;
 }
 
-#area section  .titulo {
+#area section  .titulo3 {
     text-align: center;
     font-weight: bold;
-   
     font-size: 20px;
+    padding: 10px 0
+}
+
+#area section  table {
+    margin: 0 auto;
+}
+
+#area section  .seccion1 {
+    display: flex;
+}
+
+
+#area section  table td {
+    text-align: center;
 }
 
 #area section .et{
-    text-align: left;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 5px 5px;
-    margin: 5px 5px;
-   
-
-}
-
-#area section .et2{
     text-align: left;
     font-weight: bold;
     font-size: 15px;
@@ -288,170 +259,178 @@ transition:all 1s;
 
 /* responsive */
 @media (max-width: 768px) {
-    *
-    {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-    }
-    }
-    
-@media (max-width: 768px) {
 #area
-   {
-    display: grid;
-    grid-template-areas:
-    "menu"
-    "info2"
-    "footer";
-    gap: 5px;
-    height: 120vh;
-    grid-template-rows: 50px auto auto;
-    grid-template-columns: 100%;
-    }
-    }
-        
+       {
+        display: grid;
+        grid-template-areas:
+        "menu"
+        "info2"
+        "footer";
+        gap: 5px;
+        height: 110vh;
+        grid-template-rows: 50px auto auto;
+        grid-template-columns: auto;
+        }
+        }
+            
 @media (max-width: 768px) {
 #area nav
-    {
-            
-            
-     grid-area: menu;
-     display: flex;
-     justify-content: center;
-              
-    }
-    }
+        {
+                
+                
+         grid-area: menu;
+         display: flex;
+         justify-content: center;
+                  
+        }
+        }
 @media (max-width: 768px) {
 #area nav div img
-    {
-     display:none;
-     }
-     }
-        
+        {
+         display:none;
+         }
+         }
+            
 @media (max-width: 768px) { /* max = hasta... */
- #area nav ul
-{
-     list-style: none;
-     display: flex;
-     flex-direction: row;
-     list-style: none;
-     justify-content: center;
-     align-content: stretch;
-     flex-wrap: nowrap;
-     align-items: center;
-     font-size:5px;
-        
-}
-}
-        
-    
- @media (max-width: 768px) {
- #area nav ul li a 
- {
-     margin:1px 1px;
-     padding: 1px;
-     background-color: blue;
-     text-decoration: none;
-     color:antiquewhite;
-     border-radius: 1px;
-     font-size:10px;
+#area nav ul
+    {
+         list-style: none;
+         display: flex;
+         flex-direction: row;
+         list-style: none;
+         justify-content: center;
+         align-content: stretch;
+         flex-wrap: nowrap;
+         align-items: center;
+         font-size:5px;
+            
     }
- }
+    }
+            
         
+@media (max-width: 768px) {
+#area nav ul li a 
+     {
+         margin:1px 1px;
+         padding: 1px;
+         background-color: blue;
+         text-decoration: none;
+         color:antiquewhite;
+         border-radius: 1px;
+         font-size:10px;
+        }
+     }
+            
 @media (max-width: 768px) {
 #area header
-     {
-     display:none;
-     }
-     }
-    
+         {
+         display:none;
+         }
+         }
+        
 @media (max-width: 768px) {
 #area section 
-    {
-    grid-area: info2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    }
-     }
-
- @media (max-width: 768px) {
-#area section .ir{
-     text-align: center;
-     font-weight: bold;
-     font-size: 10px;
-     padding: 5px 0px;
-     margin: 5px 0px;
-               
-}          
-}
+        {
+        grid-area: info2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        }
+         }
     
-     
+@media (max-width: 768px) {
+#area section .p1{
+         
+    font-size: 10px;
+    padding: 5px 10px;
+         
+                   
+    }          
+    }
+
+@media (max-width: 768px) {
+#area section td{
+         
+    font-size: 10px;
+    text-align:center;
+        
+                  
+   }          
+   }
+  
+@media (max-width: 768px) {
+#area section th{
+             
+        font-size: 10px;
+        text-align:center;
+            
+                      
+       }          
+       }
+
 @media (max-width: 768px) {
 #area .arreglo
-     {
-     background-color: #D4F7BB;
-     grid-area: menu;
-     position:fixed;
-     left: 0px;
-     right:0px;
-     height: 50px;
-     padding: 0px;
-         }
-        }
-        
-     
+         {
+         background-color: #D4F7BB;
+         grid-area: menu;
+         position:fixed;
+         left: 0px;
+         right:0px;
+         height: 50px;
+         padding: 0px;
+             }
+            }
+            
+         
 @media (max-width: 768px) {
 #area section .titulo2 {
-     text-align: center;
-     font-weight: bold;          
-     font-size: 20px;
-     justify-self: center;
-    }
-    }
-        
-
-        
-  
-        
+         text-align: center;
+         font-weight: bold;          
+         font-size: 20px;
+         justify-self: center;
+        }
+        }
+            
+    
+            
+      
+            
 @media (max-width: 768px) {
 #area nav div img
     {
     display:none
     }
     }
-
+    
 @media (max-width: 768px) {
 #area nav
     {
-            
+                
     grid-area: menu;       
     display: flex;      
     justify-content: center;     
     padding-top: 18px;
-            
-        /* padding-left: 0px; */
-            
-        /* column-gap: 10px; */
+                
+            /* padding-left: 0px; */
+                
+            /* column-gap: 10px; */
     }
     }
-
-@media (max-width: 768px) {
-#area section h2
-        {
-            display:none;
-            
-        }
-    }         
     
 @media (max-width: 768px) {
-#area aside
-{
-        
+#area section h2
+    {
     display:none;
-}
-}
+                
+    }
+    }         
+        
+@media (max-width: 768px) {
+#area aside
+    {
+            
+    display:none;
+    }
+    }

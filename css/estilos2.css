@@ -15,9 +15,9 @@
     "info2 info2 info2"
     "articulo articulo articulo"
     "footer footer footer";
-    gap: 5px;
-    height: 220vh;
-    grid-template-rows: 80px 270px 460px auto 50px;
+    gap: 0 px;
+    height: 230vh;
+    grid-template-rows: 80px 330px 460px auto 50px;
     grid-template-columns: auto auto 150px;
     background: linear-gradient(to top,#537A38,#D4F7BB,#A8F571);
 }
@@ -26,8 +26,8 @@
 {
     
     grid-area: info;
-    position:fixed;
-    top: 80px;
+    /*position:fixed;*/
+    top: 60px;
     left:0;
     right:0;
     padding-bottom: 5px;
@@ -39,18 +39,20 @@
 
 
 #area header h1{
+    grid-area: info;
     width: 100%;
     height: 250px;
     text-align:center;
     padding-top: 115px;
     color:antiquewhite;
-    
+    z-index:-1;
     
 }
 
 #area header .publicidad {
     display: flex;
     justify-content:space-between;
+    z-index:-1;
 
 }
 #area header h8{
@@ -86,7 +88,7 @@
     grid-area: info2;
     display:flex;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 
@@ -146,12 +148,13 @@
 
 #area .arreglo
  {
-    background-color: #D4F7BB;
+    background-color: #1b300b;
     grid-area: menu;
     position:fixed;
     left: 0px;
     right:0px;
-    padding-left: 100px;
+    /*padding-left: 100px;*/
+    z-index:1;
  }
 
 #area nav div img
@@ -391,279 +394,223 @@ a.btn-social,
 }
 
 /* responsive */
-@media (max-width: 768px) {
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-}
-
-@media (max-width: 768px) {
-#area
-{
-    display: grid;
-    grid-template-areas:
-         "menu menu menu"
-         "info2 info2 info2"
-         ". articulo ."
-         "footer footer footer";
-    gap: 5px;
-    height: 300vh;
-    grid-template-rows: auto 12% 75% auto;
-    grid-template-columns: 25% auto 25%;
+@media (max-width: 1024px) {
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
     }
     }
     
-    @media (max-width: 768px) {
-    #area header .publicidad {
-        display: none;
-    
+    @media (max-width: 1024px) {
+    #area {
+        display: grid;
+        grid-template-areas:
+            "menu menu menu"
+            "info2 info2 info2"
+            ".articulo ."
+            "footer footer footer";
+        gap: 5px;
+        height: 300vh;
+        width: cover;
+        grid-template-rows: 3% 14% 57% 5%;
+        grid-template-columns: 33% 33% 33%;
+        background: linear-gradient(to top,#537A38,#D4F7BB,#A8F571);
     }
-    #area header h8{
-        display: none;
-      }
-      
-      
-      
-    
-    #area header span{
-        display:none
-    
-    }
-}
-
-
-@media (max-width: 768px) {
-#area nav
-    {             
-    grid-area: menu;
-    display: flex;
-    justify-content: center;
-          
-    }
+    @media (max-width: 1024px) {
+    #area header
+        {
+            
+            grid-area: info2;
+            /*position:fixed;*/
+            /*top: 60px;*/
+            left:0;
+            right:0;
+            padding-bottom: 5px;
+            background-image: url(../assets/clases_particulares2.png);
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
     }
 
-@media (max-width: 768px) {
-#area nav div img
-    {
-    display:none;
-     }
-    }
+    @media (max-width: 1024px) {
+    #area nav
+        {             
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+              
+        }
+        }
     
-@media (max-width: 768px) { /* max = hasta... */
-#area nav ul
-    {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: center;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    align-items: center;
-    font-size:5px;
+    @media (max-width: 1024px) {
+    #area nav div img
+        {
+        display:none;
+         }
+        }
+        
+    @media (max-width: 1024px) { /* max = hasta... */
+    #area nav ul
+        {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: right;
+        align-content: stretch;
+        flex-wrap: nowrap;
+        align-items: right;
+        font-size:5px;
+        
+        }
+        }
+         
+    @media (max-width: 1024px) {
+    #area nav ul li a 
+        {
+        margin:1px 1px;
+        padding: 1px;
+        background-color: #A8F571;
+        text-decoration: none;
+        color:antiquewhite;
+        border-radius: 1px;
+        font-size:15px;
+        }
+        }
+        
+    @media (max-width: 1024px) {
+    #area header
+        {
+           display:none;
+        }
+        }
     
-    }
-    }
-     
-@media (max-width: 768px) {
-#area nav ul li a 
-    {
-    margin:1px 1px;
-    padding: 1px;
-    background-color: blue;
-    text-decoration: none;
-    color:antiquewhite;
-    border-radius: 1px;
-    font-size:10px;
-    }
-    }
-    
-@media (max-width: 768px) {
-#area header
-    {
-    grid-area: info;
-    position:fixed;
-    top: 80px;
-    left:0;
-    right:0;
-    padding-bottom: 5px;
-    background-image: url(../assets/clases_particulares2.png);
-    background-size: cover;
-    }
-    }
-
-@media (max-width: 768px) {
-#area section
-    {       
-    grid-area: info2;
-    display:flex;
-    align-items: flex-start;
-    padding-top: 100px;
-    }
-    }
-    
-@media (max-width: 768px) {
-#area article
-    {
-       
-    grid-area: articulo;  
-    display: flex;     
-    align-content: center;   
-    align-items: flex-start;   
-    flex-wrap: wrap;   
-    justify-content: center;
-    padding: 0px;
-
-    }
-    }
-    
-@media (max-width: 768px) {
-#area aside
-    {
-       display:none;
-    }
-    }
-    
-@media (max-width: 768px) {
-#area .arreglo
-    {
-    background-color: #D4F7BB;
-    grid-area: menu;
-    position:fixed;
-    left: 0px;
-    right:0px;
-    height: 50px;
-    padding: 0px;
-     }
-    }
-    
+    @media (max-width: 1024px) {
+    #area section
+        {       
+        grid-area: info2;
+        display:flex;
+        align-items: flex-start;
+        size:cover;
+        }
+        }
+        
    
+        
+    @media (max-width: 1024px) {
+    #area aside
+        {
+           display:none;
+        }
+        }
+        
+    @media (max-width: 1024px) {
+    #area .arreglo
+        {
+        background-color: #D4F7BB;
+        grid-area: menu;
+        position:fixed;
+        left: 0px;
+        right:0px;
+        height: 50px;
+        padding: 0px;
+         }
+        }
+        
+       
+        
+    @media (max-width: 1024px) {
+    #area section .titulo {
+        text-align: center;
+        font-weight: bold; 
+        font-size: 20px;
+        justify-self: center;
+        }
+        }
+        
+    @media (max-width: 1024px) {
+    #area section .p1 {     
+        font-size: 10px;
+        padding-top: 5px;
+        align-self: center;
+        text-align: justify;
+        text-justify: inter-word;
+        }
+        }
+        
+    @media (max-width: 1024px) {
+    #area section .principal .lista {
+        width: auto;
+        height: 80px;
+        text-align: center;
+        }
+        }
+        
+    @media (max-width: 1024px) {
+    #area section .principal .lista ul {
+        display:inline;
+        list-style: lower-roman;
+        font-style: oblique;  
+        font-family:'Courier New', Courier, monospace;
+        font-size: 10px;
+        }
+        }
+        
+        
+    @media (max-width: 1024px) {
+    #area nav div img
+        {
+        display:none
+        }
+        }
     
-@media (max-width: 768px) {
-#area section .titulo {
-    text-align: center;
-    font-weight: bold; 
-    font-size: 20px;
-    justify-self: center;
-    }
-    }
+    @media (max-width: 1024px) {
+    #area nav
+        {    
+        grid-area: menu;      
+        display: flex;      
+        justify-content: center;    
+        padding-top: 18px;
+            
+        /* padding-left: 0px; */
+            
+        /* column-gap: 10px; */
+        }
+        }
     
-@media (max-width: 768px) {
-#area section .p1 {     
-    font-size: 10px;
-    padding: 5px;
-    align-self: center;
-    }
-    }
-    
-@media (max-width: 768px) {
-#area section .principal .lista {
-    width: auto;
-    height: 80px;
-    text-align: center;
-    }
-    }
-    
-@media (max-width: 768px) {
-#area section .principal .lista ul {
-    display:inline;
-    list-style: lower-roman;
-    font-style: oblique;  
-    font-family:'Courier New', Courier, monospace;
-    font-size: 10px;
-    }
-    }
-    
-    
-@media (max-width: 768px) {
-#area nav div img
+    @media (max-width: 1024px) {
+    #area article
     {
-    display:none
-    }
-    }
-
-@media (max-width: 768px) {
-#area nav
-    {    
-    grid-area: menu;      
-    display: flex;      
-    justify-content: center;    
-    padding-top: 18px;
         
-    /* padding-left: 0px; */
-        
-    /* column-gap: 10px; */
-    }
-    }
-
-@media (max-width: 768px) {
-#area article
-{
-    
-    grid-area: articulo;
+        grid-area: articulo;
     display: flex;
     align-content: center;
     justify-items: center;
-    align-items: flex-start;
-    padding-left: 20px;
+    align-items: center;
     gap: 10px;
     padding: 0px;
     margin: 0px;
-   
-}
+    flex-direction: column;
+       
     }
-
-@media (max-width: 768px) {
-#area article p
-    {            
-    font-size: 10px;      
-    }
-    }
-
-
-@media (max-width: 768px) {
-#area article img{
-    width:300px;
-    height: auto;
-    padding-left: 0px;
-   
-}
-}
-
-@media (max-width: 768px) {
-#area header
-{
+        }
     
-    grid-area: info;
-    position:fixed;
-    top: 40px;
-    left:0;
-    right:0;
-    padding-bottom: 5px;
-    background-image: url(../assets/clases_particulares2.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-#area header h1{
-    width: 100%;
-    height: 250px;
-    text-align:center;
-    padding-top: 40px;
-    color:antiquewhite;
+    @media (max-width: 1024px) {
+    #area article p
+        {            
+        font-size: 10px;      
+        }
+        }
     
     
-}
-
-
-#area header span{
-    display:inline-block;
-    vertical-align: middle;
-    line-height: normal;
-  
-}
-
-}
+    @media (max-width: 1024px) {
+    #area article img{
+        width:300px;
+        height: auto;
+        padding-left: 0px;
+       
+    }
+    }
